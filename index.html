@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<script>
+    //移动适配
+    var desW=640; //设计稿的宽度
+    var winW=document.documentElement.clientWidth; //设备宽度
+    document.documentElement.style.fontSize=winW/desW*100+'px';
+    //各个设备根元素字体大小
+</script>
+<body>
+<section class="main">
+    <section class="music musicMove">
+        <!-- controls 显示用户操作页面
+         autoplay 自动播放
+         loop 循环播放
+         preload：auto 预加载音频文件
+         metadata 只加载音频文件的元数据，例如音频文件总共的播放时间
+         none 不提前加载音频文件
+         -->
+        <audio src="audio/beyond.mp3" preload="none" id="beyond"></audio>
+    </section>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1 swiper-slide-active">
+                <img src="img/swiper/page1-text1.png" alt=""/>
+                <img src="img/swiper/page1-text2.png" alt=""/>
+                <img src="img/swiper/page1-text3.png" alt=""/>
+                <img src="img/swiper/page1-text4.png" alt=""/>
+            </div>
+            <div class="swiper-slide slide2 swiper-slide-active">
+                <img src="img/swiper/page2-text1.png" alt=""/>
+                <img src="img/swiper/page2-text2.png" alt=""/>
+                <img src="img/swiper/page2-text3.png" alt=""/>
+                <img src="img/swiper/page2-text4.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script>
+    var mySwiper=new Swiper('.swiper-container',{
+        direction:"vertical",
+        autoplay:4000,
+        loop:true, //循环模式
+        onTransitionEnd:function(swiper){
+            var curIndex=swiper.activeIndex; //当前活动滑块的索引（也就是上一个滑块滑动结束后，到下一个滑块的索引）
+            var slides=swiper.slides;//获得所有滑块
+            //通过当前活动滑块的索引找到对应的滑块，并给它增加相应的id名
+            [].forEach.call(slides,function(item,index){
+                //加id之前  先把id名去掉
+                item.id="";
+                if(index==curIndex) {
+                    switch (index){
+                        case 0:
+                            item.id='page'+slides.length-2;
+                            break;
+                        case slides.length-1:
+                            item.id='page1';
+                            break;
+                        default :
+                            item.id='page'+index;
+                    }
+                }
+            });
+        }
+    });
+    var music=document.querySelector('.music');
+    var beyond=document.querySelector('#beyond');
+    window.setTimeout(function(){
+        beyond.play();
+        music.style.opacity=1;
+        music.className='music musicMove'
+    },1000);
+//    播放文件播放 play()  停止pause()
+    //怎样判断音频文件是播放还是停止的beyond.pause true-》停止 false-》播放
+    music.addEventListener('click',function(){
+        if(beyond.paused){
+            beyond.play();
+            music.className='music musicMove'
+        }else{
+            beyond.pause();
+            music.className='music';
+        }
+    },false)
+</script>
