@@ -77,7 +77,7 @@ html,body,.main{
     top: 7.7rem;
     left: 1.3rem;
 }
-em{
+b{
     width: 1.5rem;
     height: 1.2rem;
     background: url("../img/tttttttt.png") no-repeat;
@@ -246,9 +246,8 @@ em{
     margin: .4rem 0 0 .33rem;
     width: 2.5rem;
     height: 1.4rem;
-    border: 5px solid #fff;
+    border: 5px solid rgba(255,255,255,.5);
     border-radius: 0.6rem;
-    box-shadow: 0 0 0.1rem 0.1rem rgba(255,255,255,0.5);
     overflow: hidden;
 }
 .slide4 ul .pai{
@@ -294,8 +293,7 @@ em{
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: 0 0 0.1rem 0.1rem rgba(255,255,255,0.5);
+    border: 5px solid rgba(255,255,255,0.5);
     overflow: hidden;
 }
 .slide5>img{
@@ -493,7 +491,7 @@ em{
     -webkit-animation: zoomIn 1s 1.7s 1 both;
     animation: zoomIn 1s 1.7s 1 both;
 }
-#page1 em,#page2 em,#page3 em,#page4 em,#page5 em{
+#page1 b,#page2 b,#page3 b,#page4 b,#page5 b{
     animation: fadeOutUp 1.5s infinite linear both;
 }
 .music{
@@ -512,7 +510,8 @@ em{
     animation: move 1s infinite linear both;
 }
 @-webkit-keyframes move{
-    0%{ -webkit-transform: rotate(0deg);
+    0%{
+        -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
     100%{
