@@ -154,7 +154,7 @@ b{
 }
 .introduction p{
     text-align: center;
-    font-size: .24rem;
+    font-size: .26rem;
     color: #fff;
 }
 .introduction span{
@@ -163,9 +163,9 @@ b{
     background: url("../img/yq0KYVb9FeqAcKc8AAACdyPGkIA973.png") no-repeat center center;
     line-height: .6rem;
     text-align: center;
-    font-size: .24rem;
+    font-size: .26rem;
     margin-top: .2rem;
-    color: #13227a;
+    color: deeppink;
 }
 .slide3>img{
     width: 48px;
