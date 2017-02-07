@@ -11,7 +11,7 @@ html,body,.main{
     height: 100%;
 }
 .slide1{
-    background: url("../img/true.png") no-repeat;
+    background: url("../img/True.png") no-repeat;
     background-size: 100% 100%;
 }
 .slide2{
@@ -38,20 +38,20 @@ html,body,.main{
       width: 2.88rem;
       height: 2.88rem;
       left: 1.82rem;
-      top: 3.3rem;
+      top: 3.8rem;
       z-index: 10;
 }
 .slide1 img:nth-of-type(2){
     width: 3.18rem;
     height: 3.18rem;
     left: 1.68rem;
-    top: 3.14rem;
+    top: 3.64rem;
 }
 .slide1 img:nth-of-type(3){
     width: 3.48rem;
     height: 3.48rem;
     left: 1.52rem;
-    top: 3rem;
+    top: 3.5rem;
 }
 .swiper-wrapper-op{
     width: 3.8rem;
@@ -62,6 +62,7 @@ html,body,.main{
 }
 .swiper-wrapper-op span{
     display:inline-block;
+    margin-top: .6rem;
 }
 .slide1 p{
     color: #000;
@@ -74,7 +75,7 @@ html,body,.main{
     border-radius: 0.6rem;
     box-shadow: 0 0 0.1rem 0.1rem rgba(255,255,255,0.5);
     position: absolute;
-    top: 7.7rem;
+    top: 8.5rem;
     left: 1.3rem;
 }
 b{
@@ -82,7 +83,7 @@ b{
     height: 1.2rem;
     background: url("../img/tttttttt.png") no-repeat;
     position: absolute;
-    top: 9.6rem;
+    top: 11rem;
     left: 48%;
 }
 .div0{
