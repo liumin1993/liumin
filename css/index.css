@@ -439,30 +439,6 @@ b{
     -webkit-animation: fadeInDown 1.5s 1s 1 both;
     animation: fadeInDown 1.5s 1s 1 both;
 }
-#page4 ul li:nth-child(1){
-    -webkit-animation: flipInX 2s;
-    animation: flipInX 2s;
-}
-#page4 ul li:nth-child(2){
-    -webkit-animation: flipInX 1.5s 0.5s 1 both;
-    animation: flipInX 1.5s 0.5s 1 both;
-}
-#page4 ul li:nth-child(3){
-    -webkit-animation: flipInX 1.5s 0.7s 1 both;
-    animation: flipInX 1.5s 0.7s 1 both;
-}
-#page4 ul li:nth-child(4){
-    -webkit-animation: flipInX 1.5s 0.9s 1 both;
-    animation: flipInX 1.5s 0.9s 1 both;
-}
-#page4 ul .pai{
-    -webkit-animation: swing 1s 0.5s 4 both;
-    animation: swing 1s 0.5s 4 both;
-}
-#page4 .qqMusic{
-    -webkit-animation: rotateIn 2s 1s 1 both;
-    animation: rotateIn 2s 1s 1 both;
-}
 #page5 .div0{
     -webkit-animation:rotateIn 1s;
     animation: rotateIn 1s;
